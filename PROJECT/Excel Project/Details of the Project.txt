@@ -1,0 +1,136 @@
+📊 Excel Mini Project Details
+Title:
+
+Karate Student Data Management & Analysis System using Advanced Excel
+
+1. Objective of the Project
+
+The objective of this project is to manage and analyze karate students’ data efficiently using advanced Microsoft Excel features. The project focuses on automating calculations, organizing data, and generating meaningful insights through formulas, functions, and dashboards.
+
+2. Tools & Technologies Used
+
+Microsoft Excel
+
+Excel Functions & Formulas
+
+Pivot Tables & Pivot Charts
+
+Data Sorting & Filtering
+
+Dashboard Design
+
+3. Dataset Description
+
+The dataset consists of student records from different DOJOs. The main fields included are:
+
+Student Name
+
+Date of Birth (DOB)
+
+Gender
+
+DOJO Name
+
+Instructor Name
+
+Food Preference (Veg/Non-Veg)
+
+Guardian Name
+
+4. Project Tasks & Implementation
+4.1 Finding Age from DOB
+
+Age is calculated using Excel date functions.
+
+Formula used:
+
+=DATEDIF(DOB, TODAY(), "Y")
+
+This automatically updates the age based on the current date.
+
+4.2 Sorting Data by DOJO Name
+
+The dataset is sorted alphabetically based on DOJO Name.
+
+Helps in grouping students belonging to the same training center.
+
+4.3 Statistical Analysis
+
+Using Excel functions and Pivot Tables:
+
+Total number of students → =COUNTA()
+
+Number of male students → =COUNTIF(Gender, "Male")
+
+Number of female students → =COUNTIF(Gender, "Female")
+
+Number of guardians → =COUNTA(Guardian Column)
+
+Veg vs Non-Veg count → =COUNTIF(Food Preference, "Veg")
+
+4.4 Categorizing Students by Age
+
+Students are divided into categories using nested IF formulas:
+
+Age Range	Category
+Below 14	Sub-Junior
+14–15	Cadet
+16–17	Junior
+18–20	U-21
+Above 20	Senior
+
+Formula used:
+
+=IF(Age<14,"Sub-Junior",
+ IF(Age<=15,"Cadet",
+ IF(Age<=17,"Junior",
+ IF(Age<=20,"U-21","Senior"))))
+4.5 Instructor-wise Student List (VLOOKUP & HLOOKUP)
+
+VLOOKUP is used to fetch student details based on Instructor Name.
+
+HLOOKUP is used where data is arranged horizontally.
+
+Example:
+
+=VLOOKUP(InstructorName, TableRange, ColumnIndex, FALSE)
+
+This helps in quickly viewing all students under a specific instructor.
+
+4.6 Dashboard Creation
+
+An interactive dashboard is created using:
+
+Pivot Tables
+
+Pivot Charts
+
+Slicers
+
+The dashboard displays:
+
+Total Students
+
+Gender Distribution
+
+Category-wise Distribution
+
+DOJO-wise Student Count
+
+Food Preference Analysis
+
+5. Key Features of the Project
+
+Automated age calculation
+
+Dynamic categorization of students
+
+Instructor-wise data retrieval
+
+Clean and structured dataset
+
+Interactive visual dashboard
+
+6. Conclusion
+
+This project demonstrates how Microsoft Excel can be effectively used for real-world data management and analysis. It improves efficiency, reduces manual effort, and provides clear insights through visualization tools. The system can be further enhanced by integrating real-time data updates and advanced analytics.
